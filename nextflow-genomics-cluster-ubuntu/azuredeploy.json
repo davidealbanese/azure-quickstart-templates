@@ -388,18 +388,7 @@
           ]
         },
         "protectedSettings": {
-          "commandToExecute": "[format('bash init.sh {0} \"{1}\" {2} {3} {4} {5} {6} {7} {8} {9} {10}',
-                                          variables('storageAccountName'), 
-                                          listKeys(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2019-06-01').keys[0].value,
-                                          parameters('shareName'),
-                                          variables('storageSuffix'),
-                                          parameters('mountpointPath'), 
-                                          'false', 
-                                          parameters('adminUsername'), 
-                                          '0', 
-                                          parameters('nextflowInstallUrl'),
-                                          parameters('vmAdditionalInstallScriptUrl'),
-                                          parameters('vmAdditionalInstallScriptArgument'))]"
+          "commandToExecute": "[format('bash init.sh {0} \"{1}\" {2} {3} {4} {5} {6} {7} {8} {9} {10}', variables('storageAccountName'), listKeys(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2019-06-01').keys[0].value, parameters('shareName'), variables('storageSuffix'), parameters('mountpointPath'), 'false', parameters('adminUsername'), '0', parameters('nextflowInstallUrl'), parameters('vmAdditionalInstallScriptUrl'), parameters('vmAdditionalInstallScriptArgument'))]"
         }
       }
     },
@@ -472,18 +461,7 @@
                     ]
                   },
                   "protectedSettings": {
-                    "commandToExecute": "[format('bash init.sh {0} \"{1}\" {2} {3} {4} {5} {6} {7} {8} {9} {10}',
-                                                    variables('storageAccountName'), 
-                                                    listKeys(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2019-06-01').keys[0].value,
-                                                    parameters('shareName'),
-                                                    variables('storageSuffix'),
-                                                    parameters('mountpointPath'), 
-                                                    'true', 
-                                                    parameters('adminUsername'), 
-                                                    parameters('nodeMaxCpus'), 
-                                                    parameters('nextflowInstallUrl'), 
-                                                    parameters('vmAdditionalInstallScriptUrl'), 
-                                                    parameters('vmAdditionalInstallScriptArgument'))]"
+                    "commandToExecute": "[format('bash init.sh {0} \"{1}\" {2} {3} {4} {5} {6} {7} {8} {9} {10}', variables('storageAccountName'), listKeys(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2019-06-01').keys[0].value, parameters('shareName'), variables('storageSuffix'), parameters('mountpointPath'),  'true', parameters('adminUsername'), parameters('nodeMaxCpus'), parameters('nextflowInstallUrl'), parameters('vmAdditionalInstallScriptUrl'), parameters('vmAdditionalInstallScriptArgument'))]"
                   }
                 }
               }
